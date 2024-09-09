@@ -5,6 +5,7 @@ namespace Modules\Settings\Entities;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Modules\MasterFiles\Entities\Supplier;
 
 class User extends Model
 {
@@ -19,5 +20,10 @@ class User extends Model
 {
     return $this->belongsTo(Role::class, 'roleId');
 }
+
+public function suppliers()
+    {
+        return $this->hasMany(Supplier::class, 'createdBy');
+    }
     
 }
