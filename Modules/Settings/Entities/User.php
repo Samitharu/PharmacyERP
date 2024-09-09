@@ -9,9 +9,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class User extends Model
 {
     use HasFactory,SoftDeletes;
+    protected $table = "users";
+    protected $primaryKey  = "userId";
 
-    protected $fillable = [];
-    
+    protected $fillable = ["userName","password","email","roleId"];
+   
 
     public function role()
 {
