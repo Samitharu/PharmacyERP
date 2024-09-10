@@ -13,7 +13,7 @@ class User extends Model
     protected $table = "users";
     protected $primaryKey  = "id";
 
-    protected $fillable = ["userName","password","email","roleId"];
+    protected $fillable = ["name","password","email","roleId"];
    
 
     public function role()
