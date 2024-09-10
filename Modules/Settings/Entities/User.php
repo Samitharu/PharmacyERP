@@ -9,21 +9,20 @@ use Modules\MasterFiles\Entities\Supplier;
 
 class User extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory, SoftDeletes;
     protected $table = "users";
     protected $primaryKey  = "id";
 
-    protected $fillable = ["name","password","email","roleId"];
-   
+    protected $fillable = ["name", "password", "email", "roleId"];
+
 
     public function role()
-{
-    return $this->belongsTo(Role::class, 'roleId');
-}
+    {
+        return $this->belongsTo(Role::class, 'roleId');
+    }
 
-public function suppliers()
+    public function suppliers()
     {
         return $this->hasMany(Supplier::class, 'createdBy');
     }
-    
 }
