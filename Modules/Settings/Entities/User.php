@@ -11,7 +11,7 @@ class User extends Model
 {
     use HasFactory,SoftDeletes;
     protected $table = "users";
-    protected $primaryKey  = "userId";
+    protected $primaryKey  = "id";
 
     protected $fillable = ["userName","password","email","roleId"];
    
