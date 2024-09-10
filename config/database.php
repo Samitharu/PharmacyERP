@@ -92,6 +92,20 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+        'activitylog' => [
+        'driver' => 'mysql',
+        'host' => env('ACTIVITYLOG_DB_HOST', '127.0.0.1'),
+        'port' => env('ACTIVITYLOG_DB_PORT', '3306'),
+        'database' => env('ACTIVITYLOG_DB_DATABASE', 'erplog'),
+        'username' => env('ACTIVITYLOG_DB_USERNAME', 'root'),
+        'password' => env('ACTIVITYLOG_DB_PASSWORD', ''),
+        'unix_socket' => env('ACTIVITYLOG_DB_SOCKET', ''),
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'strict' => true,
+        'engine' => null,
+    ],
 
     ],
 
